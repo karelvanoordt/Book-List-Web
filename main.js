@@ -54,8 +54,7 @@ class onScreen {
     row.innerHTML = `
       <p>${book.title}</p>
       <p>${book.author}</p>
-      <p>${book.id}</p>
-      <p><a href="#" class="delete">REMOVE</a></p>
+      <p><a  id=${book.id} href="#" class="delete">REMOVE</a></p>
     `;
 
     list.appendChild(row);
@@ -70,7 +69,6 @@ class onScreen {
   static clearFields() {
     document.querySelector('#book-title').value = '';
     document.querySelector('#book-author').value = '';
-    document.querySelector('#book-id').value = '';
   }
 }
 
@@ -81,9 +79,9 @@ document.querySelector('#booklist-form').addEventListener('submit', (e) => {
 
   const title = document.querySelector('#book-title').value;
   const author = document.querySelector('#book-author').value;
-  const id = document.querySelector('#book-id').value;
+  const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
 
-  if (title === '' || author === '' || id === '') {
+  if (title === '' || author === '') {
     alert('Complete all the fields');
   } else {
     const book = new Book(title, author, id);
@@ -98,5 +96,5 @@ document.querySelector('#booklist-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-shelf').addEventListener('click', (e) => {
   onScreen.deleteBook(e.target);
-  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  Store.removeBook(e.target.id);
 });
