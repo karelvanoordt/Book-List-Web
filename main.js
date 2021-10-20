@@ -24,6 +24,13 @@ class Store {
     const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
+    const booksDom = document.querySelectorAll('.book a');
+    booksDom.forEach((book, i) => {
+      book.parentElement.classList.remove('gray');
+      if (i % 2 === 0) {
+        book.parentElement.classList.add('gray');
+      }
+    });
   }
 
   static removeBook(id) {
@@ -43,27 +50,55 @@ class onScreen {
   static displayBooks() {
     const books = Store.getBooks();
 
-    books.forEach((book) => onScreen.addBookToList(book));
+    books.forEach((book) => {
+      onScreen.addBookToList(book);
+    });
+
+    const booksDom = document.querySelectorAll('.book a');
+    booksDom.forEach((book, i) => {
+      book.parentElement.classList.remove('gray');
+      if (i % 2 === 0) {
+        book.parentElement.classList.add('gray');
+      }
+    });
   }
 
   static addBookToList(book) {
     const list = document.querySelector('#book-shelf');
 
-    const row = document.createElement('li');
+    const row = document.createElement('div');
+    row.className = 'book';
 
     row.innerHTML = `
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <p><a  id=${book.id} href="#" class="delete">REMOVE</a></p>
+      <p>"${book.title}" by ${book.author}</p>
+
+      <a  id=${book.id} href="#" class="delete">REMOVE</a>
     `;
+
+    const booksDom = document.querySelectorAll('.book a');
+
+    booksDom.forEach((book, i) => {
+      if (i % 2 === 0) {
+        book.parentElement.classList.add('gray');
+      }
+    });
 
     list.appendChild(row);
   }
 
   static deleteBook(el) {
     if (el.classList.contains('delete')) {
-      el.parentElement.parentElement.remove();
+      el.parentElement.remove();
     }
+
+    const booksDom = document.querySelectorAll('.book a');
+
+    booksDom.forEach((book, i) => {
+      book.parentElement.classList.remove('gray');
+      if (i % 2 === 0) {
+        book.parentElement.classList.add('gray');
+      }
+    });
   }
 
   static clearFields() {
