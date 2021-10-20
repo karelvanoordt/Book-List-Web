@@ -53,6 +53,15 @@ class onScreen {
     books.forEach((book) => {
       onScreen.addBookToList(book);
     });
+
+    const booksDom = document.querySelectorAll('.book a');
+    booksDom.forEach((book, i) => {
+      book.parentElement.classList.remove('gray');
+      if (i % 2 === 0) {
+        book.parentElement.classList.add('gray');
+      }
+    });
+    
   }
 
   static addBookToList(book) {
@@ -70,10 +79,10 @@ class onScreen {
     const booksDom = document.querySelectorAll('.book a');
 
     booksDom.forEach((book, i) => {
-      book.parentElement.classList.remove('gray');
       if (i % 2 === 0) {
         book.parentElement.classList.add('gray');
-      }
+      } 
+
     });
 
     list.appendChild(row);
