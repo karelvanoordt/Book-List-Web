@@ -1,14 +1,17 @@
 # BookList Web App
-A plain JavaScript Book List Web App for Microverse Module 2 week 1 project.
+
+A simple Book List web app to store data of Books and its authors.
 
 
-![screenshot](.screenshot.png)
+![screenshot](.screenshot1.png)
+![screenshot](.screenshot2.png)
 
 
 ## Built With
 
 - HTML
 - JAVASCRIPT
+- CSS
 
 ## Live Demo
 
