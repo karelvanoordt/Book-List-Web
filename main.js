@@ -61,7 +61,6 @@ class onScreen {
         book.parentElement.classList.add('gray');
       }
     });
-    
   }
 
   static addBookToList(book) {
@@ -81,8 +80,7 @@ class onScreen {
     booksDom.forEach((book, i) => {
       if (i % 2 === 0) {
         book.parentElement.classList.add('gray');
-      } 
-
+      }
     });
 
     list.appendChild(row);
