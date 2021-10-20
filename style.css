@@ -16,7 +16,7 @@ body {
 
 
 .layout-cont {
-    width: 40%;
+    width: 80%;
     margin: 4rem auto;
     text-align: center;
 }
@@ -42,7 +42,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    width:60%;
+    width:80%;
     margin: 1rem auto;
 }
 
@@ -56,4 +56,16 @@ body {
 #booklist-form button {
     align-self: flex-end;
     cursor: pointer;
+}
+
+
+@media (min-width:756px) {
+
+    .layout-cont {
+    width: 40%;
+    }
+
+    #booklist-form {
+        width: 50%;
+    }
 }
