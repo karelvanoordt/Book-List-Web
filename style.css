@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalam', sans-serif;
+}
+
+
+.layout-cont {
+    width: 40%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+
+#book-shelf {
+    border: 2.5px solid black;
+    width: 100%;
+}
+
+.book {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+}
+
+.gray {
+    background-color: gray !important;
+}
+
+
+#booklist-form {
+    display: flex;
+    flex-direction: column;
+
+    width:60%;
+    margin: 1rem auto;
+}
+
+#booklist-form > * {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    border: 2px solid black;
+}

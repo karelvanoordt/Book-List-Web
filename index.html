@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Book List Web App</title>
 </head>
 
 <body>
 
-    <form id="booklist-form">
-
-        <h1>My Book List</h1>
+     <div class="layout-cont">
+        <h1 class="heading-primary">All awesome books</h1>
 
         <div id="book-shelf">
         
 
         </div>
+
+        <h1 class="heading-secondary">Add a new book</h1>
+
+    <form id="booklist-form">
         <input id="book-title" type="text" name="title" placeholder="title">
 
         <input id="book-author" type="text" name="author" placeholder="author">
 
         <button id="submit-button" type="submit">Add</button>
-
-        <span id="btn-span"></span>
-
     </form>
-
+     </div>
     <script src="main.js"></script>
 </body>
 
