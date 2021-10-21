@@ -11,25 +11,68 @@
 
 <body>
 
-     <div class="layout-cont">
+    <header>
+
+        <h2 id="navbar-title">Awesome Books</h2>
+
+        <nav id="navbar">
+
+            <ul id="navbar-list">
+                <li class="navbar-option"><a class="navbar-link" href="#">List</a></li>
+                <li class="navbar-option"><a class="navbar-link" href="#">Add New</a></li>
+                <li class="navbar-option"><a class="navbar-link" href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="layout-cont">
+        
         <h1 class="heading-primary">All awesome books</h1>
 
         <div id="book-shelf">
         
+    </section>
 
-        </div>
+    <section class="add-book-container">
 
         <h1 class="heading-secondary">Add a new book</h1>
 
     <form id="booklist-form">
+
         <input id="book-title" type="text" name="title" placeholder="title">
 
         <input id="book-author" type="text" name="author" placeholder="author">
 
         <button id="submit-button" type="submit">Add</button>
     </form>
-     </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h1 id="contact-title">Contact Information</h1>
+
+            <p class="contact-paragraph">Do you have any questions or just want to say Hello?</p>
+            <p class="contact-paragraph">You can reach out to us:</p>
+
+
+            <ul id="contact-list">
+                <li class="contact-details">Our email email@mail.com</li>
+                <li class="contact-details">Our phone number 00057818921812</li>
+                <li class="contact-details">Our Address street 41, 5066 State AI </li>            
+            </ul>
+        </div>
+    </section>
+
     <script src="main.js"></script>
+
+
+    <footer>
+
+        <h2 id="footer-title">Copyright</h2>
+
+    </footer>
 </body>
 
 </html>
