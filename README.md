@@ -1,10 +1,15 @@
 # BookList Web App
 
-A simple Book List web app to store data of Books and its authors.
+A simple Book List web app to store data of Books and its authors. 
+
+Added Navigation features with JavaScript to stay in only one html page while navigating. 
 
 
 ![screenshot](.screenshot1.png)
 ![screenshot](.screenshot2.png)
+![screenshot](.screenshot3.png)
+
+
 
 
 ## Built With
