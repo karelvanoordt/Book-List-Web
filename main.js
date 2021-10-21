@@ -133,3 +133,36 @@ document.querySelector('#book-shelf').addEventListener('click', (e) => {
   onScreen.deleteBook(e.target);
   Store.removeBook(e.target.id);
 });
+
+const linkNav = document.querySelectorAll('.navbar-link');
+const bookList = document.querySelector('.layout-cont');
+const newBook = document.querySelector('.add-book-container');
+const contact = document.querySelector('#contact');
+const hourDis = document.querySelector('.hour-dis');
+// eslint-disable-next-line no-undef
+const date = luxon.DateTime.local().toString();
+hourDis.textContent = date;
+
+linkNav.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (link.id === 'book-list-link') {
+      newBook.style.display = 'none';
+      contact.style.display = 'none';
+      bookList.style.display = 'block';
+    }
+
+    if (link.id === 'new-book-link') {
+      bookList.style.display = 'none';
+      contact.style.display = 'none';
+      newBook.style.display = 'block';
+    }
+
+    if (link.id === 'contact-link') {
+      bookList.style.display = 'none';
+      newBook.style.display = 'none';
+      contact.style.display = 'block';
+    }
+  });
+});

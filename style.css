@@ -11,6 +11,8 @@
 
 .add-book-container {
   text-align: center;
+  display: none;
+  width: 60%;
 }
 
 body {
@@ -18,12 +20,26 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.cont-nav {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
   width: 98%;
   margin: 0.5rem auto;
   align-items: center;
+}
+
+.hour-dis {
+  display: flex;
+  justify-content: flex-end;
+  width: 98%;
+  margin: 0.5rem auto;
 }
 
 #navbar-list {
@@ -46,14 +62,20 @@ header {
   color: black;
 }
 
+#booklist-form > * {
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 #navbar-list > *:not(:last-child) {
   border-right: 0.5px solid black;
-
 }
 
 .layout-cont {
   width: 80%;
-  margin: 4rem auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -79,16 +101,16 @@ header {
   margin: 1rem auto;
 }
 
-#booklist-form > * {
-  margin-bottom: 1rem;
-  padding: 0.4rem;
-  border: 2px solid black;
-  border-radius: 5px;
-}
-
 #booklist-form button {
   align-self: flex-end;
   cursor: pointer;
+}
+
+main {
+  min-height: calc(100vh - 89px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -102,15 +124,16 @@ footer {
   margin: 0.5rem;
 }
 
-
 /* CONTACT */
+
+#contact {
+  display: none;
+}
 
 #contact #contact-title {
   text-align: center;
   margin-bottom: 3rem;
 }
-
-
 
 #contact-list {
   text-align: left;
@@ -119,11 +142,9 @@ footer {
 }
 
 .contact-container {
-  width: 30%;
+  width: 100%;
   margin: 1rem auto;
 }
-
-
 
 @media (min-width: 756px) {
   .layout-cont {
